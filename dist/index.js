@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("DOMContentLoaded",(()=>{console.log("the dom content has loaded"),console.log("styles have loaded"),console.log("components have loaded")}))})();
