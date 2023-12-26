@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "littlepioneer cider house website using vanilla js",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "console.log('hello world')"
   },
