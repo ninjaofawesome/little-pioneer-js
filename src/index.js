@@ -3,7 +3,7 @@ import { stylesLoaded } from "./styles/index.js";
 import { componentsLoaded } from "./components/index.js";
 
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('the dom content has loaded');
+    console.log('the dom content has loaded hahahah');
     stylesLoaded();
     componentsLoaded();
 });
