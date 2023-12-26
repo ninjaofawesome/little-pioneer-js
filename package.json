@@ -1,0 +1,22 @@
+{
+  "name": "littlepioneer-js",
+  "version": "1.0.0",
+  "description": "littlepioneer cider house website using vanilla js",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('hello world')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninjaofawesome/littlepioneer-js.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Hannah Dresser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ninjaofawesome/littlepioneer-js/issues"
+  },
+  "homepage": "https://github.com/ninjaofawesome/littlepioneer-js#readme"
+}
