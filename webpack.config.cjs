@@ -9,6 +9,11 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(__dirname, './dist')
     },
+    target: ['web', 'es5'],
+    watchOptions: {
+      ignored: /node_modules/,
+      followSymlinks: true,
+    },
     plugins: [
       new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
@@ -43,10 +48,10 @@ module.exports = {
         ]
       },
       devServer: {
-        port: 3000,
         static: {
             publicPath: path.join(__dirname, 'dist')
         },
+        port: 3000,
         open:true,
         compress: true
       },

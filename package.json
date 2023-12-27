@@ -5,7 +5,8 @@
   "main": "./index.js",
   "type": "module",
   "scripts": {
-    "dev": "webpack serve && webpack-dev-server --port 3000",
+    "babel-watch": "npx babel src --out-dir dist",
+    "dev": "webpack serve --watch --progress && npm run babel-watch",
     "build": "webpack",
     "test": "console.log('hello world')"
   },
@@ -26,6 +27,7 @@
     "@babel/core": "^7.23.6",
     "@babel/plugin-transform-runtime": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^9.1.3",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.6.0",
