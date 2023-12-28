@@ -1,0 +1,200 @@
+{
+    "sections": {
+        "home": "Home",
+        "about": "About",
+        "music": "Music",
+        "testimonials": "Testimonials",
+        "gear": "Gear"
+        
+    },
+    "cta": {
+        "title": "Ready to Record?",
+        "slug": "Let’s start chatting via email/text/phone, and go from from there.",
+        "btn":  "Click to email",
+        "altButton": "Contact LPCH"
+    },
+    "home": {
+        "lp": "Little Pioneer",
+        "ch": "Cider House",
+        "slug": "Home of New School Gear and Old School Ideals",
+        "est": "EST. 2004",
+        "collabTitle": "Collaboration",
+        "collabSlug": "I can produce, mix, master and play almost any instrument to flesh out your songs in my comfortable Manhattan music recording studio.  I'm fortunate enough to get to do this as my full-time job and I've honored that by dedicating my life to making my artist's musical dreams come true.",
+        "collabBtn": "Click to read more",
+        "listenSlug": "Sometimes the work just speaks for itself!  Check out some of the tracks I've had the pleasure of working on",
+        "listenBtn": "Click to hear music",
+        "testimonialsSlug": "My artists have produced full-length records, had their music featured on network and cable TV, charted in Billboard, created videos and toured around the country... but ultimately they all just want to come in to record because they love it.",
+        "testimonialsBtn": "Click for testimonials",
+        "gearSlug": "I have a wide variety of instruments (which artists are always welcome to use) and hardware/software to make your work stand out.",
+        "gearBtn": "Gear List",
+        "location": ["My music recording studio is located at","in NYC, and I'm $50/hr.  Additonal Questions? Email me (Craig Levy)", "I look forward to hearing from you!"],
+        "locationAddress": "40 West 27th Street",
+        "locationNumber": "(917) 535-4529"
+    },
+    "about": {
+        "title": "What We Can Do",
+        "philoTitle": "My Philosophy",
+        "philoCopy": ["I've been making music in my comfortable NYC recording studio for over 20 years.  I have new school gear and software but old school production sensibilities so I’m interested in more than just setting up the mics and recording. I like to spend some time discussing what you hear in your head and/or your ideal sound and we will make that happen...but there’s no need for a fully realized \"grand plan\" either! By getting to know you and the music you love I can craft music that \"fits\" you, in any genre. It’s always completely collaborative, loose and fun.",
+        "I’m interested in breaking new ground and bringing out the unique qualities in all my artists, so I ultimately prefer to blur the genres and not follow trends. I've spent my whole life being obsessed by music of all genres so I feel comfortable doing it all (there are no `“guilty pleasures” here), and I always make sure to keep my studio conducive to creating and experimenting.  I have regular clients that are willing to travel to me from as far away as the Bronx, Harlem, Queens… even deep New Jersey and Connecticut"], 
+        "servicesTitle": "My Services",
+        "servicesCopy": ["Be it a great idea in the making, or a fully formed song that needs to be taken to the next level, I can help you sound amazing in my NYC recording studio. Here are some of the services I offer:"],
+        "servicesList": [
+            {
+                "serviceTitle": "Vocal Recording:",
+                "serviceCopy": ["pitch correction (anything from Autotuned to 100% natural sounding); I can help create harmonies"],
+            },
+            {
+                "serviceTitle": "Mixing:",
+                "serviceCopy": ["we can mix songs we’ve recorded together or ones you’ve recorded at home (or at another studio) in person together or remotely in realtime using the", "program"],
+                "serviceLink": {
+                    "linkUrl": "https://audiomovers.com/wp/",
+                    "linkCopy": "Listen To"
+                }
+            },
+            {
+                "serviceTitle": ">Mastering:",
+                "serviceCopy": ["making songs a competitive volume, EQing and a little pixie dust"]
+            },{
+                "serviceTitle": "Production in many genres:",
+                "serviceCopy": ["rock, pop, R&B, acoustic, electronic, hip hop"],
+            },
+            {
+                "serviceTitle": "Instrumentation:",
+                "serviceCopy": ["I can play guitar, bass, keyboards (with a TON of authentic sounds including orchestral instruments, hundreds of world instruments, cool old organs & synths), and program real sampled drums (that sound REAL)"]
+            },
+            {
+                "serviceTitle": "Songwriting help:",
+                "serviceCopy": ["I can make music around acapellas and help create and hone lyrics and melodies"]
+            },
+            {
+                "serviceCopy": ["Also now offering", "voice over reels", "with original music beds"],
+            },
+            {
+                "serviceCopy": ["Feel free to bring your own instrumentals!"]
+            }
+        ]
+    },
+    "music": {
+        "musicTitle": "My Work",
+        "production": "Selected Production",
+        "vocals": "Vocals Only",
+        "ba": "Before and After",
+        "av": "Artist Videos",
+        "avCopy": "Youtube playlist of over 250 videos of songs I've had a hand in over the past 20 years, from completely creating the music around an acapella to just recording vocals."
+    },
+    "testimonials": {
+        "testimonialsTitle": "What They're Saying",
+        "artists": [
+            {
+                "name": "Stephen Leonard",
+                "copy": "Working with Craig at Little Pioneer Cider House has been one of the most rewarding experiences of my 11-year music career. He is an intuitive, open-minded, patient and innovative producer that understands music and sounds in ways I could never vocalize. Craig can take a simple idea or skeleton of a song and turn it into something magical.",
+                "musicUrls": ["https://open.spotify.com/artist/0zq4No8id7PRgHWcot2FM0?si=u8oubGb-ROikOHejr_5ARQ", "https://music.apple.com/us/artist/stephen-leonard/335222723"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1492131751/littlepioneer/stephenleonard.jpg",
+                "altText": "stephen leonard little pioneer cider house"
+            },
+            {
+                "name": "Madge Dietrich",
+                "copy": "Working with Craig was such a gift. As a singer/songwriter recording my first album, I had plenty of ideas and even more questions. Craig was incredibly patient and transparent throughout the process, humoring our wild creative experiments and offering suggestions and inspiration when needed.  His skill and collaborative spirit helped take what was originally going to be a simple acoustic album into a fully arranged, immersive musical experience.",
+                "musicUrls": ["https://open.spotify.com/artist/3AwuusuOF0VSm7kmD5IczK?si=DE645AwmRai0y6HWdwVu4A", "https://music.apple.com/us/artist/madge-dietrich/1132667293"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_fill,g_face,h_200,w_200/v1658360572/littlepioneer/madge_dietrich.jpg",
+                "altText": "madge dietrich little pioneer cider house"
+            },
+            {
+                "name": "Brent Butler",
+                "copy": "As someone that writes and composes most of their own music, I was convinced I would always need to do everything myself because anyone that could genuinely help me would be inaccessible without a big record deal. That was until I met Craig. From our first session there was immediate (and significant) improvement to the sound quality of songs I had considered already finished. Before long sessions with Craig became a pivotal part of my writing and producing process. Craig \"the engineer\" is worth the price of admission alone; Craig the creative partner has been absolutely invaluable.",
+                "musicUrls": ["https://open.spotify.com/artist/2mP3A4iY4qkWpshhOuXYWl?si=_VcaQUecQWuJzj8nslOBiQ", "https://music.apple.com/us/artist/brent-butler/549377911"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_fill,g_face,h_200,w_200/v1658360572/littlepioneer/brent_butler.jpg",
+                "altText": "brent butler little pioneer cider house"
+            },
+            {
+                "name": "Anielle Reid",
+                "copy": "As an Americana artist and banjoist, lacking knowledge of musical descriptors and music theory Craig still understood me; my music, me as an artist, and my potential.  By working with Craig I have a beautiful and professional album that I am proud of and that allows me to connect with and make more fans. I am so excited to have worked with him on my first record and can’t wait to make more!",
+                "musicUrls": ["https://open.spotify.com/artist/6XOoB1tkrj6hlOaG3gLsH2?si=7IlNN-EVRme7dFjkNKKeNQ", "https://music.apple.com/us/artist/anielle-reid/959218614"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1492131750/littlepioneer/aniellereid.png",
+                "altText": "anielle reid little pioneer cider house"
+            },
+            {
+                "name": "Dan Tucker (of Soapbox Army)",
+                "copy": "Working with Craig has been a great experience. The whole vibe in his music studio is just so relaxed and conducive to creating.  The fact that Craig is not only a producer, but also a musician, is what makes working with him even better.  He not only made my songs sound great, but he added more textures to the songs to bring them to a new level.  He has great sensibilities when it comes to music and understands what makes a song good.",
+                "musicUrls": ["https://open.spotify.com/artist/6Vdy03IWgkXmOAnsKZ89sQ?si=TYRU4QA5QQGalA-oQ29RQw", "https://music.apple.com/us/artist/soapbox-army/300512431"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1492131750/littlepioneer/dantucker.jpg",
+                "altText": "soapbox army little pioneer cider house"
+            },
+            {
+                "name": "Lylak Munk",
+                "copy": "There is nobody i would rather work with than Craig. He understands all the strange ways I describe the sounds I’m trying to achieve and he is so incredibly patient and understanding.",
+                "musicUrls": ["https://open.spotify.com/artist/0nVqAghzyp6KyzS9onrFQR?si=dBprVN0SQJyyH_E-fZj99w", "https://music.apple.com/us/artist/lylak-munk/955676789"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_fill,g_face,h_200,w_200/v1658360572/littlepioneer/lylak_munk.jpg",
+                "altText": "lylak munk little pioneer cider house"
+            },
+            {
+                "name": "Dell Wells",
+                "copy": "I came into the Cider House Music Studio as a impulsive rapper who had the ability but not the discipline.  50+ songs later and I am a seasoned songwriter and have the tools to construct a well thought out song. I learned these tricks of the trade from Craig Levy aka Little Pioneer.  if you want to challenge yourself to be better, if you want to be original and bring something breathtaking and real to the listening audience then my advice to you is PAY ATTENTION and learn from the GURU.",
+                "musicUrls": ["https://open.spotify.com/artist/09buaVnjf7XbNJjM9twnDg", "https://music.apple.com/us/artist/dell-wells/153001345"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1492131750/littlepioneer/hooligan.jpg",
+                "altText": "dell wells little pioneer cider house"
+            },
+            {
+                "name": "NEHEDAR",
+                "copy": "Craig is a breath of fresh air in terms of creative support.  He is thoroughly professional and able to interpret anything I bring to him. I am amazed every time I listen to the tracks we made together and I have recommended him to several friends.",
+                "musicUrls": ["https://open.spotify.com/artist/3y1iI9DxTirUiuo2awoGox?si=-sySIktZQT6yS4b-0_I_oQ", "https://music.apple.com/us/artist/nehedar/252476168"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1492131750/littlepioneer/nehedar.jpg",
+                "altText": "nehedar little pioneer cider house"
+            },
+            {
+                "name": "Molly Gazay",
+                "copy": "Craig is by far the best producer I have worked with. In the past, when I would decide to record a song or two and go to a producer, they would change my songs' entire essence to fit their format and style. It turned me off to getting my music produced, until I was referred to Craig. From the get go, he asked what my song's reference materials are, what is the mood/tone/genre I am trying to capture  and he listens to the feedback I give about the process. I love going into the studio, feeling like I am in a safe zone to be free to express what I am hearing in my head. The best part, Craig's intuitive nature allows him to see what you are hearing and put that down into vivid notes that enhance the song you, as the artist, have created. Craig is a wizard who comes up with new sounds that always get me excited to see the song's progression. He is a great collaborator and incredibly talented engineer. I cannot recommend him enough!",
+                "musicUrls": ["https://open.spotify.com/artist/3ahOnt1RbMNKVk02RNkbKE?si=z4byD4vSSHa3RZkizld12w", "https://music.apple.com/us/artist/molly-gazay/1603075316"],
+                "imageUrl": "https://res.cloudinary.com/ninjaofawesome/image/upload/v1658360572/littlepioneer/molly_gazay_2.jpg",
+                "altText": "molly gazay little pioneer cider house"
+            }
+        ]
+    },
+    "gear": {
+        "gearTitle": "GEAR",
+        "gearSlug": "Like the motto says, Little Pioneer Cider House is the home of Old School Ideals and New School Gear.  Check out what I've got to work with!",
+        "sections": [
+            {
+                "title": "Hardware",
+                "items": [
+                    "Monitors: Barefoot Sound Footprint01",
+                    "Vocal Booth: 4x6X7 Double Walled Whisper Room",
+                    "Microphones: Neumann TLM-103, Shure SM57",
+                    "Interface: Waves Digigrid IOS",
+                    "Preamps/Compressors: Tree Audio L/C 1 Compressor, BAE 1073MPL Preamp"
+                ]
+            },
+            {
+                "title": "Instruments",
+                "items": [
+                    "Keyboard: Yamaha 88 Key Weighted Keyboard",
+                    "Drums: Roland TD-11K",
+                    "Acoustic Guitars: Martin D-15/Classical/6 String Banjo",
+                    "Electric Guitars: Gibson Les Paul Special/Fender Stratocaster/Fender Telecaster"
+                ]
+            },
+            {
+                "title": "Software",
+                "items": [
+                    "Host Programs: Cubase, Logic, Pro Tools",
+                    "Antares: Autotune, Harmony Engine",
+                    "Mastering: Lurssen Mastering Console",
+                    "Waves: Platinum Bundle and dozens of other Waves plugins",
+                    "Izotope: Ozone 9/Nectar/RX Advanced",
+                    "Guitar Amp: Helix Native",
+                    "Other assorted plugins: Soothe 2, Gullfoss, Valhalla Reverbs, Fab Filter, Sound Toys, soo many others!"
+                ]
+            },
+            {
+                "title": "Virtual Instruments",
+                "items": [
+                    "Drums: Superior Drummer 3",
+                    "Spectrasonics: Omnisphere/Stylus RMX/Trillian/Keyscape",
+                    "Native Instruments Komplete 1",
+                    "Sooo many others!"
+                ]
+            }
+        ]
+        
+    }
+}
