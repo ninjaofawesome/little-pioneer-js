@@ -1,5 +1,4 @@
 import dts from 'rollup-plugin-dts';
-// import esbuild from 'rollup-plugin-esbuild';
 import json from "@rollup/plugin-json";
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
