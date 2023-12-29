@@ -12,7 +12,8 @@
   "scripts": {
     "start": "tsc && rollup -c -w --bundleConfigAsCjs",
     "build": "tsc && rollup -c --bundleConfigAsCjs",
-    "deploy": "npm run build && gh-pages -d dist",
+    "clean": "rm -rf ./src/bundle.js ./src/bundle.js.map",
+    "deploy": "npm run build && npm run clean && gh-pages -d dist",
     "test": "npm run build"
   },
   "repository": {
@@ -36,13 +37,9 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@rollup/plugin-url": "^8.0.2",
     "@web/rollup-plugin-html": "^2.1.2",
     "gh-pages": "^6.1.1",
-    "path": "^0.12.7",
     "rollup": "*",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-sourcemaps": "^0.6.3",
-    "tslib": "^2.6.2"
+    "rollup-plugin-sourcemaps": "^0.6.3"
   }
 }
