@@ -12,6 +12,7 @@
   "scripts": {
     "start": "tsc && rollup -c -w --bundleConfigAsCjs",
     "build": "tsc && rollup -c --bundleConfigAsCjs",
+    "deploy": "npm run build && gh-pages -d dist",
     "test": "npm run build"
   },
   "repository": {
@@ -37,6 +38,7 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "@rollup/plugin-url": "^8.0.2",
     "@web/rollup-plugin-html": "^2.1.2",
+    "gh-pages": "^6.1.1",
     "path": "^0.12.7",
     "rollup": "*",
     "rollup-plugin-dts": "^6.1.0",
