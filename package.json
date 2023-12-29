@@ -2,7 +2,7 @@
   "name": "littlepioneer-js",
   "version": "1.0.0",
   "description": "littlepioneer cider house website using vanilla js",
-  "main": "./src/index.js",
+  "main": "dist/bundle.js",
   "type": "module",
   "files": [
     "index-bundle.d.ts",
@@ -10,8 +10,8 @@
     "index-bundle.js.map"
   ],
   "scripts": {
-    "start": "tsc && rollup -c -w",
-    "build": "tsc && rollup -c",
+    "start": "tsc && rollup -c -w --bundleConfigAsCjs",
+    "build": "tsc && rollup -c --bundleConfigAsCjs",
     "test": "npm run build"
   },
   "repository": {
@@ -32,16 +32,12 @@
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@web/dev-server": "^0.4.1",
-    "concurrently": "^8.2.2",
-    "deepmerge": "^4.3.1",
-    "fs": "^0.0.1-security",
+    "@rollup/plugin-url": "^8.0.2",
+    "path": "^0.12.7",
     "rollup": "*",
     "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-esbuild": "^6.1.0",
-    "rollup-plugin-serve": "^1.1.1",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "tslib": "^2.6.2"
   }

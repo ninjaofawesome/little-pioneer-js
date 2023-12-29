@@ -3,13 +3,11 @@ import { stylesLoaded } from "./styles/index";
 import { componentsLoaded } from "./components/index";
 import { JSONLogger } from "./utils/index";
 
-export const renderApp = () => {
-    window.addEventListener('DOMContentLoaded', () => {
-        console.log('dom content loaded')
-        stylesLoaded();
-        componentsLoaded();
-        JSONLogger('./src/utils/textDictionary.json');
-    });
-}
+window.addEventListener('DOMContentLoaded', () => {
+    console.log('dom content loaded')
+    stylesLoaded();
+    componentsLoaded();
+    JSONLogger('./src/utils/textDictionary.json');
+});
 
 
