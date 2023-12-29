@@ -38,6 +38,6 @@ export default [
     input: './src/index.html',
     output: { dir: './dist' },
     plugins: [html()],
-}
+  }
 ]
 
