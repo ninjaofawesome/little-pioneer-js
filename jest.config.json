@@ -1,0 +1,10 @@
+{
+    "bail": 1,
+    "verbose": true,
+    "transform": {
+        "\\.ts": "rollup-jest"
+      },
+    "snapshotResolver": "./jest/snapshotResolver.js"
+  }
+  
+  
