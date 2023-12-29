@@ -80,6 +80,6 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log('dom content loaded');
     stylesLoaded();
     componentsLoaded();
-    JSONLogger('./src/utils/textDictionary.json');
+    JSONLogger('./utils/textDictionary.json');
 });
 //# sourceMappingURL=bundle.js.map
