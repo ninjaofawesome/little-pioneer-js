@@ -36,6 +36,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@rollup/plugin-url": "^8.0.2",
+    "@web/rollup-plugin-html": "^2.1.2",
     "path": "^0.12.7",
     "rollup": "*",
     "rollup-plugin-dts": "^6.1.0",

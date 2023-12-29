@@ -1,4 +1,4 @@
-import * as path from 'path';
+import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
 import json from "@rollup/plugin-json";
 import typescript from '@rollup/plugin-typescript';
 import sourcemaps from 'rollup-plugin-sourcemaps';
@@ -33,6 +33,11 @@ export default [
         sourcemaps(),
         nodeResolve()
     ],
-  }
+  },
+  {
+    input: './src/index.html',
+    output: { dir: './dist' },
+    plugins: [html()],
+}
 ]
 
