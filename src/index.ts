@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('dom content loaded')
     stylesLoaded();
     componentsLoaded();
-    JSONLogger('./src/utils/textDictionary.json');
+    JSONLogger('./utils/textDictionary.json');
 });
 
 
