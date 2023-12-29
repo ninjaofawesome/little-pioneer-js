@@ -1,9 +1,5 @@
-'use strict';
-
-// this is the entry point for all styles, will be building a css-in-js solution
 var stylesLoaded = function () { return console.log('styles have loaded'); };
 
-// this is the entry point for all components
 var componentsLoaded = function () { return console.log('components have loaded'); };
 
 /******************************************************************************
@@ -20,6 +16,8 @@ LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
+/* global Reflect, Promise, SuppressedError, Symbol */
+
 
 function __awaiter(thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -64,36 +62,28 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
-/**
- *
- * @param {*} obj
- *
- * fetches all the JSON data from a file/url and returns it for use
- */
 var readJSON = function (file) { return __awaiter(void 0, void 0, void 0, function () {
     var response;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, fetch(file)];
+            case 0: return [4, fetch(file)];
             case 1:
                 response = _a.sent();
-                return [4 /*yield*/, response.json()];
-            case 2: return [2 /*return*/, _a.sent()];
+                return [4, response.json()];
+            case 2: return [2, _a.sent()];
         }
     });
 }); };
-/**
- *
- * @param {*} file
- * @returns
- *
- * handy utility for logging JSON data using the readJSON function
- */
 var JSONLogger = function (file) { return readJSON(file).then(function (data) { return console.log(data); }); };
 
-// this is the entry point for all functionality on the site
-window.addEventListener('DOMContentLoaded', function () {
-    stylesLoaded();
-    componentsLoaded();
-    JSONLogger('./src/utils/textDictionary.json');
-});
+var renderApp = function () {
+    window.addEventListener('DOMContentLoaded', function () {
+        console.log('dom content loaded');
+        stylesLoaded();
+        componentsLoaded();
+        JSONLogger('./src/utils/textDictionary.json');
+    });
+};
+
+export { renderApp };
+//# sourceMappingURL=bundle.js.map
