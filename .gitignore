@@ -4,3 +4,7 @@ node_modules/
 dist/
 **/__snapshots__
 package-lock.json
+
+// temporary files
+src/bundle.js
+src/bundle.map.js
