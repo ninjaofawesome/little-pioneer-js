@@ -1,10 +1,9 @@
 // each component and helpers
 import ListComponent from "./List/List";
-import ListItem, {createListItems} from './List/ListItem';
+import ListItem, { createListItems } from './List/ListItem';
 
 // utility functions
 import { appendComponent, registerComponents } from "./utils";
-
 
 export {
     ListComponent,
