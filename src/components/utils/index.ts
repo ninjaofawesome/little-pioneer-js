@@ -1,6 +1,5 @@
-import { appendComponent, registerComponents } from "./componentHelpers";
+import { appendComponent } from "./componentHelpers";
 
 export {
-    appendComponent,
-    registerComponents
+    appendComponent
 };
