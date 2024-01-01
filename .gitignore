@@ -1,7 +1,7 @@
 // general
 node_modules/
 .github
-**/dist/*.*
+**/dist/
 dist/
 **/__snapshots__
 package-lock.json

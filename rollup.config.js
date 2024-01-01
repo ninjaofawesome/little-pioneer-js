@@ -1,4 +1,5 @@
 import * as path from 'path';
+import serve from 'rollup-plugin-serve';
 import url from '@rollup/plugin-url';
 import json from "@rollup/plugin-json";
 import typescript from '@rollup/plugin-typescript';
@@ -19,11 +20,6 @@ export default [
     },
     output: [
         {
-            file: `./src/bundle.js`,
-            format: 'es',
-            sourcemap: true
-        },
-        {
             file: `./dist/bundle.js`,
             format: 'es',
             sourcemap: true
@@ -36,16 +32,19 @@ export default [
 		}
     ],
     plugins: [
+        serve({
+            contentBase: ['dist', 'src'],
+        }),
         typescript({
-            tsconfig: './tsconfig.json',
+            tsconfig: './tsconfig.json'
         }),
         json(),
-        sourcemaps(),
+        sourcemaps({
+            sourcemap: true,
+            file: 'dist/bundle.js',
+        }),
         nodeResolve(),
-        url({
-            fileName: '[dirname][hash][extname]',
-            sourceDir: path.join(__dirname, 'src')
-        })
+        url() 
     ],
   },
   {

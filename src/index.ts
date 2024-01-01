@@ -1,8 +1,9 @@
 // this is the entry point for all functionality on the site
 import '@webcomponents/custom-elements';
+// import data from './utils/textDictionary.json' assert { type: 'json' };
+import data from './utils/textDictionary.json';
 import { stylesLoaded } from "./styles/index";
-import { componentsLoaded } from "./components/index";
-import { readJSON } from "./utils";
+import { componentsLoaded, createListComponent } from "./components/index";
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('dom content loaded');
@@ -10,22 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
     stylesLoaded();
     componentsLoaded();
 
-    // read all the json and do stuff
-    // todo: refactor this in the list component
-    readJSON('../../utils/textDictionary.json').then(data => {
-        const bodyElement = document.querySelector('body');
-        const list = document.createElement('list-component');
+    const bodyElement = document.querySelector('body');
+    const list = createListComponent(data)
 
-        const menuValues = Object.values(data.sections);
-        menuValues.forEach(item => {
-            const eachListItem = document.createElement('list-item-component')
-            eachListItem.innerHTML = `<p>${item}</p>`;
-            list.appendChild(eachListItem)
-        });
-
-        bodyElement!.appendChild(list);
-
-    });
+    bodyElement!.appendChild(list);
 
 });
 
