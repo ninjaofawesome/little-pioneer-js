@@ -12,7 +12,7 @@ export default class ListComponent extends HTMLElement {
 
     
     }
-}
+};
 
 customElements.define('list-component', ListComponent, {extends: 'ul'})
 

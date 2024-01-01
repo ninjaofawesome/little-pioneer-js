@@ -36,7 +36,9 @@ export default [
 		}
     ],
     plugins: [
-        typescript({tsconfig: './tsconfig.json'}),
+        typescript({
+            tsconfig: './tsconfig.json',
+        }),
         json(),
         sourcemaps(),
         nodeResolve(),
@@ -46,10 +48,10 @@ export default [
         })
     ],
   },
-//   {
-//     input: './src/index.html',
-//     output: { dir: './dist' },
-//     plugins: [html()],
-//   }
+  {
+    input: './src/index.html',
+    output: { dir: './dist' },
+    plugins: [html()],
+  }
 ]
 

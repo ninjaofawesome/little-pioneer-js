@@ -46,6 +46,7 @@
     "gh-pages": "^6.1.1",
     "path": "^0.12.7",
     "rollup": "*",
-    "rollup-plugin-sourcemaps": "^0.6.3"
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "tslib": "^2.6.2"
   }
 }
