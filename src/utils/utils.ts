@@ -7,7 +7,8 @@
 
 export const readJSON = async (file: string) => {
     const response = await fetch(file);
-    return await response.json();
+    const json = await response.json();
+    return json;
 };
 
 /**

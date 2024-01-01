@@ -1,10 +1,11 @@
 // general
 node_modules/
 .github
+**/dist/*.*
 dist/
 **/__snapshots__
 package-lock.json
 
 // temporary files
 src/bundle.js
-src/bundle.map.js
+src/bundle.js.map

@@ -10,7 +10,7 @@
     "index-bundle.js.map"
   ],
   "scripts": {
-    "start": "tsc && rollup -c -w --bundleConfigAsCjs",
+    "start": "tsc && rollup --config --environment NODE_ENV:development --watch",
     "build": "tsc && rollup -c --bundleConfigAsCjs",
     "clean": "rm -rf ./src/bundle.js ./src/bundle.js.map",
     "deploy": "npm run build && npm run clean && gh-pages -d dist",
@@ -30,18 +30,23 @@
   },
   "homepage": "https://github.com/ninjaofawesome/littlepioneer-js#readme",
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.6.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
+    "@rollup/browser": "^4.9.1",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@rollup/plugin-url": "^8.0.2",
     "@types/jest": "^29.5.11",
     "@web/rollup-plugin-html": "^2.1.2",
     "gh-pages": "^6.1.1",
+    "path": "^0.12.7",
     "rollup": "*",
-    "rollup-plugin-sourcemaps": "^0.6.3"
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "tslib": "^2.6.2"
   }
 }

@@ -1,3 +1,7 @@
-export  {readJSON, JSONLogger} from './utils';
+import  {readJSON, JSONLogger} from './utils';
+export {
+    readJSON,
+    JSONLogger
+};
 
 
