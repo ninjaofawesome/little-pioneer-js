@@ -1,4 +1,3 @@
-import * as path from 'path';
 import serve from 'rollup-plugin-serve';
 import url from '@rollup/plugin-url';
 import json from "@rollup/plugin-json";
