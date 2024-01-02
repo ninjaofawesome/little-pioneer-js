@@ -1,8 +1,9 @@
-import  {readJSON, JSONLogger} from './utils';
+import  {
+    addTextToElement
+} from './utils';
 
 export {
-    readJSON,
-    JSONLogger
+    addTextToElement
 };
 
 

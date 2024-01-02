@@ -1,23 +1,11 @@
 /**
  * 
- * @param {*} obj 
- * 
- * fetches all the JSON data from a file/url and returns it for use
+ * @param el 
+ * @param content 
+ * @returns a text node to append to a H or P tag
  */
-
-export const readJSON = async (file: string) => {
-    const response = await fetch(file);
-    const json = await response.json();
-    return json;
+export const addTextToElement = (el: HTMLElement, content: string) => {
+    const text = document.createTextNode(content);
+    return el.appendChild(text);
 };
-
-/**
- * 
- * @param {*} file 
- * @returns 
- * 
- * handy utility for logging JSON data using the readJSON function
- */
-
-export const JSONLogger = (file: string) => readJSON(file).then(data => console.log(data)); 
  
