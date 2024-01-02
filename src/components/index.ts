@@ -8,7 +8,7 @@ export {
     Header5,
     Header6
 } from "./Text/Header";
-export { Paragraph } from "./Text/Paragraph";
+export { Paragraph, createParagraphElement } from "./Text/Paragraph";
 
 //elements
 import ListComponent, { createListComponent } from "./List/List";
@@ -17,7 +17,7 @@ import ListItem from './List/ListItem';
 export {
     ListComponent,
     ListItem,
-    createListComponent
+    createListComponent,
 };
 
 

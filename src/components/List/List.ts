@@ -16,7 +16,7 @@ export const createListComponent = (data: {[key: string]: object | object[] | st
     const list = document.createElement('list-component');
 
     const menuValues = Object.values(data.sections);
-    menuValues.forEach(item => {
+    menuValues.forEach((item: string) => {
         const eachListItem = document.createElement('list-item-component')
         eachListItem.innerHTML = `<p>${item}</p>`;
         list.appendChild(eachListItem)
