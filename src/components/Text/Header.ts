@@ -96,11 +96,11 @@ export class Header6 extends Header {
     }
 };
 
-customElements.define('header1-element', Header1, {extends: 'h1'});
-customElements.define('header2-element', Header2, {extends: 'h2'});
-customElements.define('header3-element', Header3, {extends: 'h3'});
-customElements.define('header4-element', Header4, {extends: 'h4'});
-customElements.define('header5-element', Header5, {extends: 'h5'});
-customElements.define('header6-element', Header6, {extends: 'h6'});
+customElements.define('header1-element', Header1);
+customElements.define('header2-element', Header2);
+customElements.define('header3-element', Header3);
+customElements.define('header4-element', Header4);
+customElements.define('header5-element', Header5);
+customElements.define('header6-element', Header6);
 
   

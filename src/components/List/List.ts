@@ -26,6 +26,6 @@ export const createListComponent = (data: {[key: string]: object | object[] | st
 
 }
 
-customElements.define('list-component', ListComponent, {extends: 'ul'})
+customElements.define('list-component', ListComponent)
 
   

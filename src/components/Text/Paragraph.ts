@@ -28,4 +28,4 @@ export const createParagraphElement = (data: object | object[] | string | string
     return p;
 };
 
-customElements.define('paragraph-element', Paragraph, {extends: 'p'})
+customElements.define('paragraph-element', Paragraph)
