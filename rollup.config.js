@@ -40,7 +40,7 @@ export default [
         json(),
         sourcemaps({
             sourcemap: true,
-            file: 'dist/bundle.js',
+            file: './dist/bundle.js',
         }),
         nodeResolve(),
         url() 

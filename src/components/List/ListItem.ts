@@ -11,4 +11,4 @@ export default class ListItem extends HTMLElement {
     }
 }
 
-customElements.define('list-item-component', ListItem, {extends: 'li'});
+customElements.define('list-item-component', ListItem);
