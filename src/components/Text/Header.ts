@@ -1,3 +1,4 @@
+import { addTextToElement } from "../../utils";
 /**
  * class that creates the base Header element
  */
@@ -102,5 +103,15 @@ customElements.define('header3-element', Header3);
 customElements.define('header4-element', Header4);
 customElements.define('header5-element', Header5);
 customElements.define('header6-element', Header6);
+
+export const createHeaderElement = (data: string , el: string) => {
+    const headerTag = document.createElement(`${el}`);
+
+    addTextToElement(headerTag, data);
+
+    return headerTag;
+};
+
+
 
   

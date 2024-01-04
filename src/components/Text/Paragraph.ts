@@ -3,7 +3,7 @@ import { addTextToElement } from "../../utils";
 /**
  * class that creates a P tag
  */
-export class Paragraph extends HTMLElement {
+class Paragraph extends HTMLElement {
     constructor() {
         super();
         console.log('Paragraph --->')
