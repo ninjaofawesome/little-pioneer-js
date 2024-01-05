@@ -5,7 +5,8 @@ import { stylesLoaded } from "./styles/index";
 import {
     createListComponent,
     createParagraphElement,
-    createHeaderElement
+    createHeaderElement,
+    createLinkElement
 } from "./components/index";
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,8 +21,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const p = createParagraphElement(paraData) as Node;
     const h1Left = createHeaderElement(data.home.lp, 'header1-element') as Node;
     const h1Right = createHeaderElement(data.home.ch, 'header1-element') as Node;
+    const link = document.createElement('anchor-element');
+    link.setAttribute('text', 'I AM LINK');
+    link.setAttribute('url', 'www.google.com')
+    
+    
 
-    bodyElement!.appendChild(list);
+    bodyElement!.appendChild(list).appendChild(link);
     bodyElement!.appendChild(h1Left).appendChild(h1Right);
     bodyElement!.appendChild(p);
 

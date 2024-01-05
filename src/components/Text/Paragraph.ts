@@ -14,6 +14,15 @@ class Paragraph extends HTMLElement {
     }
 };
 
+export const splitParagraphElement = (data: object | object[] | string | string[]) => {
+
+};
+
+/**
+ * 
+ * @param data 
+ * @returns a paragraph element and also functionality for paragraph elements with links
+ */
 export const createParagraphElement = (data: object | object[] | string | string[]) => {
     const p = document.createElement('paragraph-element');
     const dataArray = Array.isArray(data);
