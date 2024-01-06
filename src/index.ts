@@ -6,7 +6,7 @@ import {
     createListComponent,
     createParagraphElement,
     createHeaderElement,
-    createLinkElement
+    createAnchorElement
 } from "./components/index";
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,9 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const p = createParagraphElement(paraData) as Node;
     const h1Left = createHeaderElement(data.home.lp, 'header1-element') as Node;
     const h1Right = createHeaderElement(data.home.ch, 'header1-element') as Node;
-    const link = document.createElement('anchor-element');
-    link.setAttribute('text', 'I AM LINK');
-    link.setAttribute('url', 'www.google.com')
+    const link = createAnchorElement({text: 'Hello World', url: 'https://www.google.com/', target: 'blank', noreferrer: true});
     
     
 
