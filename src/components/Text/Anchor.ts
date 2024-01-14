@@ -1,13 +1,7 @@
 import { addTextToElement } from "../../utils";
 
-type AnchorTargets = 'blank' | 'self' | 'parent' | 'top';
-
-interface LinkProps {
-  text: string; 
-  url: string;
-  target?: AnchorTargets;
-  noreferrer?: boolean;
-  noopener?: boolean;
+export interface LinkProps {
+  [key: string]: any;
 };
 
 /**
@@ -15,7 +9,15 @@ interface LinkProps {
  * @param data 
  * @returns an anchor element with attributes if needed
  */
-export const createAnchorElement = ({text, url, target, noreferrer, noopener}: LinkProps) => {
+export const createAnchorElement = (props: LinkProps) => {
+    const {
+      text,
+      url,
+      target,
+      noreferrer,
+      noopener
+    } = props;
+
     const link = document.createElement('a');
     //base settings
     link.setAttribute('href', url);
@@ -36,8 +38,6 @@ export const createAnchorElement = ({text, url, target, noreferrer, noopener}: L
     if(noopener) {
       link.setAttribute('rel', 'noopener');
     }
-
-    console.log(link)
 
     return link;
 };

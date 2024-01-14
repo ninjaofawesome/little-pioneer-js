@@ -1,4 +1,5 @@
 import { addTextToElement } from "../../utils";
+import { createAnchorElement, LinkProps } from "./Anchor";
 
 /**
  * class that creates a P tag
@@ -14,27 +15,47 @@ class Paragraph extends HTMLElement {
     }
 };
 
-export const splitParagraphElement = (data: object | object[] | string | string[]) => {
 
+/**
+ * 
+ * @param props 
+ * @returns a paragraph with links and text
+ */
+export const splitParagraphElement = (data: string | LinkProps) => {
+    const vals = Object.values(data);
+
+    const paragraph = document.createElement('paragraph-element');
+
+    vals.forEach(item => {
+        if (typeof item === 'string') {
+            paragraph.innerHTML += item;
+        }
+        paragraph.appendChild(createAnchorElement(item));
+    });
+
+    return paragraph;
 };
+
 
 /**
  * 
  * @param data 
  * @returns a paragraph element and also functionality for paragraph elements with links
  */
-export const createParagraphElement = (data: object | object[] | string | string[]) => {
+export const createParagraphElement = (data: string | LinkProps) => {
     const p = document.createElement('paragraph-element');
-    const dataArray = Array.isArray(data);
-    if (dataArray || typeof data === 'object') {
-        //todo:  create a split paragraph element with anchor links
-        console.log('this is an array or an object, use a different function');
-        return;
+
+    if(typeof data === 'string') {
+        addTextToElement(p, data);
     }
 
-    addTextToElement(p, data);
+    splitParagraphElement(data)
 
     return p;
 };
+
+
+
+
 
 customElements.define('paragraph-element', Paragraph)
