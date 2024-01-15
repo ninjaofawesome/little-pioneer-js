@@ -1,0 +1,23 @@
+{
+    "homepage": {
+        "intro": "My music recording studio is located at",
+        "locationLink":  {
+            "text": "40 West 27th Street", 
+            "url": "https://www.google.com/maps/place/40+W+27th+St,+New+York,+NY+10001/@40.7449338,-73.9925253,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259a5c071704b:0xe4a883b4284f0cbd!8m2!3d40.7449298!4d-73.9903313", 
+            "target": "blank",
+            "noreferrer": true
+        },
+        "locationText": "in NYC, and I'm $50/hr.  Additonal Questions? Email me (Craig Levy)",
+        "emailLink": {
+            "text": "craig@littlepioneer.com", 
+            "url": "mailto:craig@littlepioneer.com?subject=Hey!", 
+            "target": "blank"
+        },
+        "phone": "or text/call",
+        "phoneLink": {
+            "text": "(917) 535-4529", 
+            "url": "tel:9175354529"
+        },
+        "closing":  ".  I look forward to hearing from you!"
+    }
+}
