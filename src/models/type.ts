@@ -8,8 +8,8 @@ export interface AnchorElement {
     noopener?: boolean;
 };
 
+
 export interface ParagraphElement {
-    data: string | AnchorElement;
 };
 
 export interface HeaderElement {
@@ -17,4 +17,5 @@ export interface HeaderElement {
     el: string;
 };
 
+// if multiple types may be necessary
 export type TextElement = AnchorElement | ParagraphElement | HeaderElement;

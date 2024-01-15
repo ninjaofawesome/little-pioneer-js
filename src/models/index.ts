@@ -6,5 +6,5 @@ export {
 } from './type';
 
 export {
-    ListComponent
+    ListElement
 } from './elements';

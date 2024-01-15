@@ -16,11 +16,17 @@ window.addEventListener('DOMContentLoaded', () => {
     stylesLoaded();
 
     const bodyElement = document.querySelector('body');
-    const list = createListComponent(data);
+    const list = createListComponent(data.sections); 
 
     const p = createParagraphElement(data.home.collabSlug) as Node;
-    const h1Left = createHeaderElement(data.home.lp, 'header1-element') as Node;
-    const h1Right = createHeaderElement(data.home.ch, 'header1-element') as Node;
+    const h1Left = createHeaderElement({
+        data: data.home.lp,
+        el: 'header1-element'
+    }) as Node;
+    const h1Right = createHeaderElement({
+        data: data.home.ch, 
+        el: 'header1-element'
+    }) as Node;
 
     const contact = splitParagraphElement(contactData.homepage) as Node;
 

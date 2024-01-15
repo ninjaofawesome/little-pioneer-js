@@ -1,5 +1,3 @@
-export interface ListComponent {
-    data: {
-        [key: string]: object | object[] | string
-    }
+export interface ListElement {
+    [key: string]: object | object[] | string
 };
