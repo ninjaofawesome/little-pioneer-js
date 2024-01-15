@@ -1,3 +1,4 @@
+import { ListElement } from "../../models";
 /**
  * class that creates the ul element
  */
@@ -12,11 +13,11 @@ export default class ListComponent extends HTMLElement {
     }
 };
 
-export const createListComponent = (data: {[key: string]: object | object[] | string}) => {
+export const createListComponent = ({data}: ListElement) => {
     const list = document.createElement('list-component');
 
-    const menuValues = Object.values(data.sections);
-    menuValues.forEach((item: string) => {
+    const menuValues = Object.values(data);
+    menuValues.forEach((item) => {
         const eachListItem = document.createElement('list-item-component')
         eachListItem.innerHTML = `<p>${item}</p>`;
         list.appendChild(eachListItem)

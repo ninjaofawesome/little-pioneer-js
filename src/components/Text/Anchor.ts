@@ -1,23 +1,22 @@
+import { AnchorElement } from "../../models";
 import { addTextToElement } from "../../utils";
-
-export interface LinkProps {
-  [key: string]: any;
-};
 
 /**
  * 
- * @param data 
- * @returns an anchor element with attributes if needed
+ * @param {string} text 
+ * @param {string} url
+ * @param {string} target
+ * @param {boolean} noreferrer
+ * @param {boolean} noopener 
+ * @returns  an anchor element with optional target, no referrer and noopener props
  */
-export const createAnchorElement = (props: LinkProps) => {
-    const {
-      text,
-      url,
-      target,
-      noreferrer,
-      noopener
-    } = props;
-
+export const createAnchorElement = ({
+  text,
+  url,
+  target,
+  noreferrer,
+  noopener
+}: AnchorElement) => {
     const link = document.createElement('a');
     //base settings
     link.setAttribute('href', url);

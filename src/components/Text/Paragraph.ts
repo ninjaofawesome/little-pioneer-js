@@ -1,5 +1,6 @@
+import { ParagraphElement } from "../../models";
 import { addTextToElement } from "../../utils";
-import { createAnchorElement, LinkProps } from "./Anchor";
+import { createAnchorElement } from "./Anchor";
 
 /**
  * class that creates a P tag
@@ -21,7 +22,7 @@ class Paragraph extends HTMLElement {
  * @param props 
  * @returns a paragraph with links and text
  */
-export const splitParagraphElement = (data: string | LinkProps) => {
+export const splitParagraphElement = (data: ParagraphElement) => {
     const vals = Object.values(data);
 
     const paragraph = document.createElement('paragraph-element');
@@ -42,7 +43,7 @@ export const splitParagraphElement = (data: string | LinkProps) => {
  * @param data 
  * @returns a paragraph element and also functionality for paragraph elements with links
  */
-export const createParagraphElement = (data: string | LinkProps) => {
+export const createParagraphElement = (data: ParagraphElement ) => {
     const p = document.createElement('paragraph-element');
 
     if(typeof data === 'string') {

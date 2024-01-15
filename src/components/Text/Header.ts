@@ -1,22 +1,10 @@
+import { HeaderElement } from "../../models";
 import { addTextToElement } from "../../utils";
-/**
- * class that creates the base Header element
- */
-export class Header extends HTMLElement {
-    constructor() {
-        super();
-        console.log('base Header --->')
-    }
-
-    connectedCallback() {
-        console.log('Header has mounted to page');
-    }
-};
 
 /**
  * class that creates a H1 tag
  */
-export class Header1 extends Header {
+export class Header1 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 1 --->')
@@ -30,7 +18,7 @@ export class Header1 extends Header {
 /**
  * class that creates a H2 tag
  */
-export class Header2 extends Header {
+export class Header2 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 2 --->')
@@ -44,7 +32,7 @@ export class Header2 extends Header {
 /**
  * class that creates a H3 tag
  */
-export class Header3 extends Header {
+export class Header3 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 3 --->')
@@ -58,7 +46,7 @@ export class Header3 extends Header {
 /**
  * class that creates a H4 tag
  */
-export class Header4 extends Header {
+export class Header4 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 4 --->')
@@ -72,7 +60,7 @@ export class Header4 extends Header {
 /**
  * class that creates a H5 tag
  */
-export class Header5 extends Header {
+export class Header5 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 5 --->')
@@ -86,7 +74,7 @@ export class Header5 extends Header {
 /**
  * class that creates a H6 tag
  */
-export class Header6 extends Header {
+export class Header6 extends HTMLElement {
     constructor() {
         super();
         console.log('Header 6 --->')
@@ -104,10 +92,10 @@ customElements.define('header4-element', Header4);
 customElements.define('header5-element', Header5);
 customElements.define('header6-element', Header6);
 
-export const createHeaderElement = (data: string , el: string) => {
-    const headerTag = document.createElement(`${el}`);
+export const createHeaderElement = (props: HeaderElement) => {
+    const headerTag = document.createElement(`${props.el}`);
 
-    addTextToElement(headerTag, data);
+    addTextToElement(headerTag, props.data);
 
     return headerTag;
 };
