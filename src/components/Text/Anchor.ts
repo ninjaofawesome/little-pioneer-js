@@ -1,3 +1,4 @@
+import { AnchorElement } from "../../models";
 import { addTextToElement } from "../../utils";
 
 export interface LinkProps {
@@ -9,15 +10,13 @@ export interface LinkProps {
  * @param data 
  * @returns an anchor element with attributes if needed
  */
-export const createAnchorElement = (props: LinkProps) => {
-    const {
-      text,
-      url,
-      target,
-      noreferrer,
-      noopener
-    } = props;
-
+export const createAnchorElement = ({
+  text,
+  url,
+  target,
+  noreferrer,
+  noopener
+}: AnchorElement) => {
     const link = document.createElement('a');
     //base settings
     link.setAttribute('href', url);
