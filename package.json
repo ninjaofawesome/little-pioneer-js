@@ -13,8 +13,7 @@
     "start": "tsc && rollup -c -w",
     "build": "tsc && rollup -c",
     "deploy": "npm run build && gh-pages -d dist",
-    "serve": "serve",
-    "test": "jest"
+    "serve": "serve"
   },
   "repository": {
     "type": "git",

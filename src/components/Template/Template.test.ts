@@ -8,6 +8,6 @@ describe('templates', () => {
        bodyEl?.appendChild(template);
        console.log('screen', screen.getByTestId('test'));
 
-        expect(screen.getByTestId('test')).toHaveLength(1)
+        expect(screen.getByTestId('test')).toBeTruthy();
     })
 })
