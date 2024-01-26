@@ -6,8 +6,7 @@ describe('templates', () => {
        const template = TemplateComponent('test');
        const bodyEl = document.querySelector('body');
        bodyEl?.appendChild(template);
-       console.log('screen', screen.getByTestId('test'));
 
         expect(screen.getByTestId('test')).toBeTruthy();
     })
-})
+});
