@@ -13,7 +13,8 @@
     "start": "tsc && rollup -c -w",
     "build": "tsc && rollup -c",
     "deploy": "npm run build && gh-pages -d dist",
-    "serve": "serve"
+    "serve": "serve",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -49,7 +50,10 @@
     "@types/jest": "^29.5.11",
     "@web/rollup-plugin-html": "^2.1.2",
     "gh-pages": "^6.1.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "rollup": "*",
+    "rollup-jest": "^3.1.0",
     "rollup-plugin-serve": "^1.1.1",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "ts-jest": "^29.1.1",

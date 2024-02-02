@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index page hello world title to be present 1`] = `"<h1 id="title">Hello World</h1>"`;

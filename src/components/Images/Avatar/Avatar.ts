@@ -1,9 +1,8 @@
-//todo: create service for state in next ticket
+//todo: extend this way to other components
 
 export class AvatarComponent extends HTMLElement {
     constructor() {
         super();
-        console.log('Avatar --->')
     }
 
     connectedCallback() {
@@ -12,7 +11,6 @@ export class AvatarComponent extends HTMLElement {
     }
 
     render() {
-        console.log('hello avatar');
         return (document.createElement('avtar-component'));
     }
 }

@@ -40,13 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
     navComponent.content.appendChild(p);
 
     navElement!.appendChild(navComponent.content);
-    const AvatarElement = AvatarComponent;
+    const AvatarElement = new AvatarComponent as Node;
 
     // mainElement!.appendChild(list);
     mainElement!.appendChild(h1Left).appendChild(h1Right);
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
-    mainElement!.appendChild(AvatarElement).
+    mainElement!.appendChild(AvatarElement)
 
 });
 
