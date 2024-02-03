@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "littlepioneer cider house website using vanilla js",
   "main": "dist/bundle.js",
-  "type": "module",
   "files": [
     "index.d.ts",
     "bundle.js",

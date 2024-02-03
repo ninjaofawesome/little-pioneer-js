@@ -1,5 +1,5 @@
 // each component and helpers
-import TemplateComponent from "./Template/Template";
+import {TemplateComponent} from "./Template/Template";
 import {AvatarComponent} from "./Images/Avatar/Avatar";
 
 //Text
