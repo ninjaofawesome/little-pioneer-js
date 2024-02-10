@@ -1,5 +1,5 @@
 import {screen} from '@testing-library/dom';
-import {TemplateComponent} from "./Template";
+import TemplateComponent from "./Template";
 
 describe('templates', () => {
     test('it should have an id', ()=> {
