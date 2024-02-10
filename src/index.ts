@@ -5,10 +5,17 @@ import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
 import TemplateComponent from './components';
 import AvatarComponent from './components';
+import ListComponent from './components';
+import AnchorElement from './components';
+import Header1 from './components';
+import Header2 from './components';
+import Header3 from './components';
+import Header4 from './components';
+import Header5 from './components';
+import Header6 from './components';
 import {
     // createListComponent,
     createParagraphElement,
-    createHeaderElement,
     splitParagraphElement
 } from "./components";
 
@@ -25,14 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // const list = createListComponent(data.sections); 
 
     const p: Node = createParagraphElement(data.home.collabSlug);
-    const h1Left = createHeaderElement({
-        data: data.home.lp,
-        el: 'header1-element'
-    });
-    const h1Right = createHeaderElement({
-        data: data.home.ch, 
-        el: 'header1-element'
-    });
+    const h1Left: Node = Header1(data.home.lp);
+    const h1Right = Header1(data.home.ch);
 
     const contact = splitParagraphElement(contactData.homepage);
 
@@ -40,13 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
     navComponent.content.appendChild(p);
 
     navElement!.appendChild(navComponent.content);
-    const AvatarElement: Node = new AvatarComponent;
+    const Avatar: Node = AvatarComponent();
 
     // mainElement!.appendChild(list);
     mainElement!.appendChild(h1Left).appendChild(h1Right);
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
-    mainElement!.appendChild(AvatarElement)
+    mainElement!.appendChild(Avatar)
 
 });
 

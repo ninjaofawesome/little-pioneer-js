@@ -1,6 +1,6 @@
 //todo: extend this way to other components
 
-class AvatarComponent extends HTMLElement {
+export default class AvatarComponent extends HTMLElement {
     constructor() {
         super();
     }
@@ -17,7 +17,6 @@ class AvatarComponent extends HTMLElement {
 
 customElements.define('avatar-component', AvatarComponent);
 
-export default AvatarComponent;
 
 
 

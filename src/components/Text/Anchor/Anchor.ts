@@ -10,7 +10,7 @@ import { addTextToElement } from "../../../utils";
  * @param {boolean} noopener 
  * @returns  an anchor element with optional target, no referrer and noopener props
  */
-export const createAnchorElement = ({
+const AnchorElement = ({
   text,
   url,
   target,
@@ -40,4 +40,6 @@ export const createAnchorElement = ({
 
     return link;
 };
+
+export default AnchorElement;
 
