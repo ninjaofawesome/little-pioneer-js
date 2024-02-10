@@ -1,4 +1,4 @@
-import { addTextToElement } from "../../utils";
+import { addTextToElement } from "../../../utils";
 
 describe('p tags', () => {
 

@@ -1,5 +1,5 @@
-import { AnchorElement } from "../../models";
-import { addTextToElement } from "../../utils";
+import { AnchorElement } from "../../../models";
+import { addTextToElement } from "../../../utils";
 
 /**
  * 

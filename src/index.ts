@@ -3,13 +3,13 @@ import '@webcomponents/custom-elements';
 import data from './utils/textDictionary.json';
 import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
+import TemplateComponent from './components';
+import AvatarComponent from './components';
 import {
     // createListComponent,
     createParagraphElement,
     createHeaderElement,
-    splitParagraphElement,
-    AvatarComponent,
-    TemplateComponent
+    splitParagraphElement
 } from "./components";
 
 
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const footerElement = document.querySelector('footer'); 
     // const list = createListComponent(data.sections); 
 
-    const p = createParagraphElement(data.home.collabSlug) as Node;
+    const p: Node = createParagraphElement(data.home.collabSlug);
     const h1Left = createHeaderElement({
         data: data.home.lp,
         el: 'header1-element'
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navComponent.content.appendChild(p);
 
     navElement!.appendChild(navComponent.content);
-    const AvatarElement = new AvatarComponent as Node;
+    const AvatarElement: Node = new AvatarComponent;
 
     // mainElement!.appendChild(list);
     mainElement!.appendChild(h1Left).appendChild(h1Right);

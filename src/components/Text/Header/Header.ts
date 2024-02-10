@@ -1,5 +1,5 @@
-import { HeaderElement } from "../../models";
-import { addTextToElement } from "../../utils";
+import { HeaderElement } from "../../../models";
+import { addTextToElement } from "../../../utils";
 
 /**
  * class that creates a H1 tag
