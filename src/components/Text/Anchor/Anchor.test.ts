@@ -1,9 +1,9 @@
-import { createAnchorElement } from "./Anchor";
+import AnchorElement from "./Anchor";
 //todo: install testing library to actually check click
 describe('a tags', () => {
     test('a link should click to a target if one is provided', () => {
         const page =  document.body;
-        const link = createAnchorElement({
+        const link = AnchorElement({
             text: 'test',
             url: 'https://www.google.com/',
             target: 'blank'

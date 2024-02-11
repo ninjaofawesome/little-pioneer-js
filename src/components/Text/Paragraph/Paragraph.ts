@@ -1,6 +1,6 @@
 import { ParagraphElement } from "../../../models";
 import { addTextToElement } from "../../../utils";
-import { createAnchorElement } from "../Anchor/Anchor";
+import AnchorElement from "../Anchor/Anchor";
 
 /**
  * class that creates a P tag
@@ -31,7 +31,7 @@ export const splitParagraphElement = (data: ParagraphElement) => {
         if (typeof item === 'string') {
             paragraph.innerHTML += item;
         }
-        paragraph.appendChild(createAnchorElement(item));
+        paragraph.appendChild(AnchorElement(item));
     });
 
     return paragraph;
