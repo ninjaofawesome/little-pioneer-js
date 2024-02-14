@@ -9,11 +9,7 @@ import Header3 from './Text/Header/Header3';
 import Header4 from './Text/Header/Header4';
 import Header5 from './Text/Header/Header5';
 import Header6 from './Text/Header/Header6';
-
-
-
-//Text
-export { createParagraphElement, splitParagraphElement } from "./Text/Paragraph/Paragraph";
+import Paragraph from "./Text/Paragraph/Paragraph";
 
 //elements
 const Components =  {
@@ -26,7 +22,8 @@ const Components =  {
     Header3,
     Header4,
     Header5,
-    Header6
+    Header6,
+    Paragraph
 };
 
 export default Components;

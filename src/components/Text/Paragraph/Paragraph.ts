@@ -1,62 +1,51 @@
-import { ParagraphElement } from "../../../models";
 import { addTextToElement } from "../../../utils";
 import AnchorElement from "../Anchor/Anchor";
-
-/**
- * class that creates a P tag
- */
-class Paragraph extends HTMLElement {
-    constructor() {
-        super();
-        console.log('Paragraph --->')
-    }
-
-    connectedCallback() {
-        console.log('Paragraph has mounted to page');
-    }
-};
-
 
 /**
  * 
  * @param props 
  * @returns a paragraph with links and text
  */
-export const splitParagraphElement = (data: ParagraphElement) => {
+const splitParagraphElement = (el: HTMLElement, data: object) => {
     const vals = Object.values(data);
-
-    const paragraph = document.createElement('paragraph-element');
 
     vals.forEach(item => {
         if (typeof item === 'string') {
-            paragraph.innerHTML += item;
+            el.innerHTML += item;
         }
-        paragraph.appendChild(AnchorElement(item));
+        el.appendChild(AnchorElement(item));
     });
 
-    return paragraph;
-};
+    console.log(el)
 
+    return el;
+};
 
 /**
- * 
- * @param data 
- * @returns a paragraph element and also functionality for paragraph elements with links
+ * class that creates a P tag
  */
-export const createParagraphElement = (data: ParagraphElement ) => {
-    const p = document.createElement('paragraph-element');
-
-    if(typeof data === 'string') {
-        addTextToElement(p, data);
+class Paragraph extends HTMLElement {
+    data: string | object;
+    
+    constructor(data: string | object) {
+        super();
+        this.data = data;
+        console.log('paragraph has loaded')
     }
 
-    splitParagraphElement(data)
+    connectedCallback(data: string | object) {
+        const paragraph = document.createElement('paragraph-element');
 
-    return p;
-};
+        if(typeof data === 'string') {
+            addTextToElement(paragraph, data);
+        } else if (typeof data === 'object') {
+            splitParagraphElement(paragraph, data);
+        }
+        console.log({paragraph})
+        return paragraph;
+    }
+}
 
+customElements.define('paragraph-element', Paragraph);
 
-
-
-
-customElements.define('paragraph-element', Paragraph)
+export default Paragraph;
