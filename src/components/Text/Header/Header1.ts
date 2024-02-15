@@ -5,6 +5,9 @@ import { addTextToElement } from "../../../utils";
  * class that creates a H1 tag
  */
 class Header1 extends HTMLElement {
+    content(content: any) {
+        throw new Error('Method not implemented.');
+    }
     data: string;
 
     constructor(data: string) {

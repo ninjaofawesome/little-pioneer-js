@@ -22,6 +22,7 @@ const {
 
 
 window.addEventListener('DOMContentLoaded', () => {
+    console.log('content loaded')
 
     stylesLoaded();
 
@@ -32,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const p = new Paragraph(data.home.collabSlug);
     const h1Left= new Header1(data.home.lp);
     const h1Right = new Header1(data.home.ch);
+
+    console.log({p})
 
     const contact = new Paragraph(contactData.homepage);
     mainElement.appendChild(h1Left).appendChild(h1Right);
