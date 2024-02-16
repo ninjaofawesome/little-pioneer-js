@@ -11,9 +11,11 @@ const splitParagraphElement = (el: HTMLElement, data: object) => {
 
     vals.forEach(item => {
         if (typeof item === 'string') {
-            el.innerHTML += item;
-        }
-        el.appendChild(AnchorElement(item));
+            addTextToElement(el, item);
+        } else if (typeof item === 'object') {
+            console.log(item)
+            el.appendChild(AnchorElement(item));
+        };
     });
 
     return el;
@@ -28,23 +30,28 @@ class Paragraph extends HTMLElement {
     constructor(data: string | object) {
         super();
         this.data = data;
-        console.log('paragraph has loaded')
     }
 
     connectedCallback() {
-        const paragraph = document.createElement('paragraph-element');
-        paragraph.setAttribute('role', 'paragraph')
+        this.render();
+        this.addText();
+    }
 
+    render() {
+        console.log('paragraph has loaded');
+        const paragraph = document.createElement('paragraph-element');
+        paragraph.setAttribute('aria-role', 'paragraph');
+        return paragraph;
+    }
+
+    addText() {
         const content = this.data;
-        let el = undefined;
 
         if(typeof content === 'string') {
-            el = addTextToElement(paragraph, content);
+            this.innerHTML = `${content}`;
         } else if (typeof content === 'object') {
-            el =splitParagraphElement(paragraph, content);
+            splitParagraphElement(this, content)
         }
-        
-        return el;
     }
 }
 

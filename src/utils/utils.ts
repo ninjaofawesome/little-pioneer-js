@@ -4,9 +4,6 @@
  * @param content 
  * @returns a text node to append to a H or P tag
  */
-export const addTextToElement = (el: HTMLElement, content: string) => {
-    el.innerHTML = content;
-  
-    return el;
-};
+export const addTextToElement = (el: HTMLElement, content: string) => el.innerHTML += content;
+
  
