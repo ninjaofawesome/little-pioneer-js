@@ -9,13 +9,10 @@ export interface AnchorElement {
 };
 
 
-export interface ParagraphElement {
-};
-
 export interface HeaderElement {
     data: string;
     el: string;
 };
 
 // if multiple types may be necessary
-export type TextElement = AnchorElement | ParagraphElement | HeaderElement;
+export type TextElement = AnchorElement | HeaderElement;

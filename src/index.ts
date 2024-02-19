@@ -4,12 +4,11 @@ import data from './utils/textDictionary.json';
 import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
 import {
+    Paragraph,
+    SplitParagraph,
     // createListComponent,
-    createParagraphElement,
     createHeaderElement,
-    splitParagraphElement,
-    AvatarComponent,
-    TemplateComponent
+    AvatarComponent
 } from "./components";
 
 
@@ -23,8 +22,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const mainElement = document.querySelector('main');
     const footerElement = document.querySelector('footer'); 
     // const list = createListComponent(data.sections); 
+    const headerDiv = document.createElement('div');
 
-    const p = createParagraphElement(data.home.collabSlug) as Node;
+    const p = new Paragraph(data.home.collabSlug);
+  
     const h1Left = createHeaderElement({
         data: data.home.lp,
         el: 'header1-element'
@@ -33,17 +34,16 @@ window.addEventListener('DOMContentLoaded', () => {
         data: data.home.ch, 
         el: 'header1-element'
     });
+    headerDiv.appendChild(h1Left);
+    headerDiv.appendChild(h1Right);
 
-    const contact = splitParagraphElement(contactData.homepage);
+    const contact = new SplitParagraph(contactData.homepage);
 
-    const navComponent = TemplateComponent('nav-element');
-    navComponent.content.appendChild(p);
+    navElement!.appendChild(headerDiv);
 
-    navElement!.appendChild(navComponent.content);
-    const AvatarElement = new AvatarComponent as Node;
+    const AvatarElement = new AvatarComponent();
 
     // mainElement!.appendChild(list);
-    mainElement!.appendChild(h1Left).appendChild(h1Right);
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
     mainElement!.appendChild(AvatarElement)
