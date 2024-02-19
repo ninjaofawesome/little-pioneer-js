@@ -5,6 +5,7 @@ import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
 import {
     Paragraph,
+    SplitParagraph,
     // createListComponent,
     createHeaderElement,
     AvatarComponent
@@ -36,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     headerDiv.appendChild(h1Left);
     headerDiv.appendChild(h1Right);
 
-    const contact = new Paragraph(contactData.homepage);
+    const contact = new SplitParagraph(contactData.homepage);
 
     navElement!.appendChild(headerDiv);
 

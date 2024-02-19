@@ -1,12 +1,13 @@
 import { addTextToElement } from "../../../utils";
-import { createAnchorElement } from "../Anchor";
+// todo, think about a better way to refactor this so the types work better
+
 /**
  * class that creates a P tag
  */
 export class Paragraph extends HTMLElement {
-    data: string | object;
+    data: string;
 
-    constructor(data: string | object) {
+    constructor(data: string) {
         super();
         this.data = data;
         console.log('Paragraph --->')
@@ -15,28 +16,10 @@ export class Paragraph extends HTMLElement {
     connectedCallback() {
         console.log('Paragraph has mounted to page');
         this.render();
-  
-    }
-
-    splitParagraph() {
-        const vals = Object.values(this.data);
-    
-        vals.forEach(item => {
-            if (typeof item === 'string') {
-                addTextToElement(this, item)
-            } else if (typeof item === 'object') {
-                this.appendChild(createAnchorElement(item));
-            }  
-        });
     }
 
     addText() {
-        if (typeof this.data === 'string') {
-            addTextToElement(this, this.data);
-        } else if (typeof this.data === 'object') {
-            this.splitParagraph();
-        }
-        
+        addTextToElement(this, this.data);   
     }
 
     render() {
