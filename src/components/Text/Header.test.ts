@@ -1,3 +1,5 @@
+import '@testing-library/jest-dom'
+import{ screen } from '@testing-library/dom';
 import { addTextToElement } from "../../utils";
 
 describe('h tags', () => {
@@ -12,8 +14,8 @@ describe('h tags', () => {
         addTextToElement(header1, 'hello world header1');
         page.appendChild(header1);
 
-        const text = page.querySelector('header1-element');
-        expect(text?.innerHTML).toBe('hello world header1')
+        const text = screen.getByText('hello world header1');
+        expect(text).toBeInTheDocument();
       });
 
       test('multiple headers to be on page with content', () => {
