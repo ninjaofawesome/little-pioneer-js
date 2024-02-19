@@ -6,8 +6,8 @@ import { stylesLoaded } from "./styles/index";
 import {
     Paragraph,
     SplitParagraph,
+    Header1,
     // createListComponent,
-    createHeaderElement,
     AvatarComponent
 } from "./components";
 
@@ -26,14 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const p = new Paragraph(data.home.collabSlug);
   
-    const h1Left = createHeaderElement({
-        data: data.home.lp,
-        el: 'header1-element'
-    });
-    const h1Right = createHeaderElement({
-        data: data.home.ch, 
-        el: 'header1-element'
-    });
+    const h1Left = new Header1(data.home.lp);
+    const h1Right = new Header1(data.home.ch);
     headerDiv.appendChild(h1Left);
     headerDiv.appendChild(h1Right);
 
@@ -47,7 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
     mainElement!.appendChild(AvatarElement)
-
 });
 
 
