@@ -1,6 +1,5 @@
 export { 
     AnchorElement,
-    ParagraphElement,
     HeaderElement,
     TextElement 
 } from './type';

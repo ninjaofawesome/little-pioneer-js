@@ -7,8 +7,7 @@ import {
     Paragraph,
     // createListComponent,
     createHeaderElement,
-    AvatarComponent,
-    TemplateComponent
+    AvatarComponent
 } from "./components";
 
 
@@ -39,15 +38,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const contact = new Paragraph(contactData.homepage);
 
-    const navComponent = TemplateComponent('nav-element');
-    navComponent.append(headerDiv);
-
     navElement!.appendChild(headerDiv);
 
     const AvatarElement = new AvatarComponent();
 
     // mainElement!.appendChild(list);
-    //mainElement!.appendChild(h1Left).appendChild(h1Right);
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
     mainElement!.appendChild(AvatarElement)
