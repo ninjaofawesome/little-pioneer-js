@@ -1,6 +1,4 @@
 import { addTextToElement } from "../../../utils";
-// todo, think about a better way to refactor this so the types work better
-
 /**
  * class that creates a P tag
  */

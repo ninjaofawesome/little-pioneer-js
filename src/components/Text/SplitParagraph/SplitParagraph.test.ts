@@ -7,7 +7,7 @@ describe('p tags', () => {
         document.body.innerHTML = '';
     });
 
-    test('a paragraph to be on page with content', () => {
+    test('a paragraph to be on page with content and links', () => {
         const page =  document.body;
         const paragraph1 = new SplitParagraph(contactData.homepage)
         page.appendChild(paragraph1);
