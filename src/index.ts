@@ -6,8 +6,7 @@ import { stylesLoaded } from "./styles/index";
 import {
     Paragraph,
     // createListComponent,
-    // createHeaderElement,
-    splitParagraphElement,
+    createHeaderElement,
     AvatarComponent,
     TemplateComponent
 } from "./components";
@@ -23,24 +22,29 @@ window.addEventListener('DOMContentLoaded', () => {
     const mainElement = document.querySelector('main');
     const footerElement = document.querySelector('footer'); 
     // const list = createListComponent(data.sections); 
+    const headerDiv = document.createElement('div');
 
     const p = new Paragraph(data.home.collabSlug);
-    // const h1Left = createHeaderElement({
-    //     data: data.home.lp,
-    //     el: 'header1-element'
-    // });
-    // const h1Right = createHeaderElement({
-    //     data: data.home.ch, 
-    //     el: 'header1-element'
-    // });
+  
+    const h1Left = createHeaderElement({
+        data: data.home.lp,
+        el: 'header1-element'
+    });
+    const h1Right = createHeaderElement({
+        data: data.home.ch, 
+        el: 'header1-element'
+    });
+    headerDiv.appendChild(h1Left);
+    headerDiv.appendChild(h1Right);
 
-    const contact = splitParagraphElement(contactData.homepage);
+    const contact = new Paragraph(contactData.homepage);
 
     const navComponent = TemplateComponent('nav-element');
-    navComponent.content.appendChild(p);
+    navComponent.append(headerDiv);
 
-    navElement!.appendChild(navComponent.content);
-    const AvatarElement = new AvatarComponent as Node;
+    navElement!.appendChild(headerDiv);
+
+    const AvatarElement = new AvatarComponent();
 
     // mainElement!.appendChild(list);
     //mainElement!.appendChild(h1Left).appendChild(h1Right);
