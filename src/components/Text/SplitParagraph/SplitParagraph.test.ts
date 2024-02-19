@@ -1,3 +1,4 @@
+import {screen} from '@testing-library/dom';
 import { SplitParagraph } from "./SplitParagraph";
 import contactData from "../../../utils/linkTextDictionary.json";
 
@@ -15,6 +16,8 @@ describe('p tags', () => {
         const text = page.querySelector('split-paragraph-element');
         // check for text
         expect(text!.innerHTML).toContain('Additonal Questions? Email me (Craig Levy)');
+        // check that anchor tags exist
+        expect(screen.getByText('craig@littlepioneer.com').closest('a')?.getAttribute('href')).toEqual('mailto:craig@littlepioneer.com?subject=Hey!')
         // check for link text
         expect(text!.innerHTML).toContain('craig@littlepioneer.com'); 
       });

@@ -46,6 +46,7 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "@rollup/plugin-url": "^8.0.2",
     "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.2",
     "@types/jest": "^29.5.11",
     "@web/rollup-plugin-html": "^2.1.2",
     "gh-pages": "^6.1.1",

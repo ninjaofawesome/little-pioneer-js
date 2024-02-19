@@ -1,3 +1,4 @@
+import {screen} from "@testing-library/dom";
 import { createAnchorElement } from "./Anchor";
 //todo: install testing library to actually check click
 describe('a tags', () => {
@@ -9,7 +10,7 @@ describe('a tags', () => {
             target: 'blank'
         });
         page.appendChild(link);
-        expect(link.href).toBe('https://www.google.com/');
-        expect(link.target).toBe('_blank');
+        expect(screen.getByText('test').closest('a')?.getAttribute('href')).toEqual('https://www.google.com/');
+        expect(screen.getByText('test').closest('a')?.getAttribute('target')).toEqual('_blank');
     });
 });
