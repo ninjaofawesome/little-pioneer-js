@@ -5,7 +5,7 @@ import {AvatarComponent} from "./Images/Avatar/Avatar";
 //Text
 export { Paragraph } from "./Text/Paragraph/Paragraph";
 export { SplitParagraph } from './Text/SplitParagraph/SplitParagraph';
-export { createAnchorElement } from './Text/Anchor';
+export { AnchorElement } from './Text/Anchor/Anchor';
 export {
     Header1,
     Header2,

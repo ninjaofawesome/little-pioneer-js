@@ -1,5 +1,5 @@
 import { addTextToElement } from "../../../utils";
-import { createAnchorElement } from "../Anchor";
+import { AnchorElement } from "../Anchor/Anchor";
 /**
  * class that creates a P tag
  */
@@ -25,7 +25,9 @@ export class SplitParagraph extends HTMLElement {
             if (typeof item === 'string') {
                 addTextToElement(this, item)
             } else if (typeof item === 'object') {
-                this.appendChild(createAnchorElement(item));
+                console.log({item})
+                // const anchorEl = new AnchorElement(item);
+                // this.appendChild(anchorEl);
             }  
         });
     }

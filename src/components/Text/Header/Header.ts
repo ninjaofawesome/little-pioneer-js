@@ -1,4 +1,3 @@
-import { HeaderElement } from "../../../models";
 import { addTextToElement } from "../../../utils";
 
 /**

@@ -1,7 +1,5 @@
-export { 
-    AnchorElement,
-    HeaderElement,
-    TextElement 
+export {
+    AnchorElementProps
 } from './type';
 
 export {
