@@ -1,7 +1,7 @@
 import { addTextToElement } from "../../../utils";
 import { AnchorElement } from "../Anchor/Anchor";
 /**
- * class that creates a P tag
+ * class that creates a P tag with links inside
  */
 export class SplitParagraph extends HTMLElement {
     data: object;
