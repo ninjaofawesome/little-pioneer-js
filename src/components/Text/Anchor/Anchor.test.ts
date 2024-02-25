@@ -4,11 +4,7 @@ import { AnchorElement } from "./Anchor";
 describe('a tags', () => {
     test('a link should click to a target if one is provided', () => {
         const page =  document.body;
-        const link = new AnchorElement({
-            text: 'test',
-            url: 'https://www.google.com/',
-            target: 'blank'
-        });
+        const link = new AnchorElement('test', 'https://www.google.com/','blank');
         page.appendChild(link);
         expect(screen.getByText('test').closest('a')?.getAttribute('href')).toEqual('https://www.google.com/');
         expect(screen.getByText('test').closest('a')?.getAttribute('target')).toEqual('_blank');

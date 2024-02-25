@@ -7,9 +7,9 @@ import { AnchorElement } from "../Anchor/Anchor";
  * class that creates a P tag
  */
 export class Paragraph extends HTMLElement {
-    data: string | object;
+    data: string;
 
-    constructor(data: string | object) {
+    constructor(data: string) {
         super();
         this.data = data;
         console.log('Paragraph --->')
@@ -18,35 +18,16 @@ export class Paragraph extends HTMLElement {
     connectedCallback() {
         console.log('Paragraph has mounted to page');
         this.render();
-  
-    }
-
-    splitParagraph() {
-        const vals = Object.values(this.data);
-    
-        vals.forEach(item => {
-            if (typeof item === 'string') {
-                addTextToElement(this, item)
-            } else if (typeof item === 'object') {
-                const anchorEl = new AnchorElement(item);
-                this.appendChild(anchorEl);
-            }  
-        });
     }
 
     addText() {
-        if (typeof this.data === 'string') {
-            addTextToElement(this, this.data);
-        } else if (typeof this.data === 'object') {
-            this.splitParagraph();
-        }
-        
+        addTextToElement(this, this.data);
     }
 
     render() {
         const p = document.createElement('paragraph-element');
         p.setAttribute('role', 'paragraph');
-        this.addText()
+        this.addText();
         return p;
     }
 };

@@ -2,54 +2,58 @@ import { AnchorElementProps } from "../../../models";
 import { addTextToElement } from "../../../utils";
 
 export class AnchorElement extends HTMLElement {
-
   text: string;
   url: string;
-  target: string | undefined;
-  noreferrer?: boolean | undefined;
-  noopener?: boolean | undefined;
+  target?: 'blank' | 'self' | 'parent' | 'top';
+  noreferrer?: boolean;
+  noopener?: boolean;
   
-  constructor({text, url, target, noreferrer, noopener}: AnchorElementProps) {
+  constructor( 
+    text: string,
+    url: string,
+    target?: 'blank' | 'self' | 'parent' | 'top',
+    noreferrer?: boolean,
+    noopener?: boolean
+  ) {
     super();
-    this.text = text,
-    this.url = url,
+    this.text = text || '',
+    this.url = url || '/',
     this.target = target,
-    this.noreferrer = noreferrer,
-    this.noopener = noopener
+    this.noreferrer = noreferrer || false,
+    this.noopener = noopener || false
   };
 
   connectedCallback() {
     this.render();
   }
 
+  requiredAttributes() {
+    this.setAttribute('role', 'link');
+    this.setAttribute('tabindex', '0');
+    this.setAttribute('href', this.url);
+  }
+
   optionalLinkAttributes() {
-    if (this.target) {
-      if(this.target === 'blank' && !this.noreferrer) {
-        console.log('If you are using target blank, we recommend adding noreferrer: true to the data object for security purposes')
-      }
+    if (this.target !== undefined) {
       this.setAttribute('target', `_${this.target}`)
     }
 
-    if(this.noreferrer) {
       this.setAttribute('rel', 'noreferrer');
-    }
 
-    if(this.noopener) {
       this.setAttribute('rel', 'noopener');
-    }
   }
 
   addText() {
+    console.log('add text', this.text)
     addTextToElement(this, this.text);
   }
 
   render() {
     const link = document.createElement('anchor-element');
-    link.setAttribute('role', 'link');
-    link.setAttribute('tabindex', '0');
-    link.setAttribute('href', this.url);
-    this.optionalLinkAttributes();
     this.addText();
+    this.requiredAttributes();
+    this.optionalLinkAttributes();
+
 
     return link;
   }

@@ -25,9 +25,8 @@ export class SplitParagraph extends HTMLElement {
             if (typeof item === 'string') {
                 addTextToElement(this, item)
             } else if (typeof item === 'object') {
-                console.log({item})
-                // const anchorEl = new AnchorElement(item);
-                // this.appendChild(anchorEl);
+                const anchorEl = new AnchorElement(item.text, item.url, item.target, item.noopener, item.noreferrer);
+                this.appendChild(anchorEl);
             }  
         });
     }
