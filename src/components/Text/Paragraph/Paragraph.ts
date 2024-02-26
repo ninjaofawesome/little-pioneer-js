@@ -20,9 +20,13 @@ export class Paragraph extends HTMLElement {
         addTextToElement(this, this.data);   
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'paragraph');
+    }
+
     render() {
         const p = document.createElement('paragraph-element');
-        p.setAttribute('role', 'paragraph');
+        this.requiredAttributes();
         this.addText()
         return p;
     }

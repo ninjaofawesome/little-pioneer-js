@@ -21,10 +21,14 @@ export class Header1 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '1');
+    }
+
     render() {
         const h1 = document.createElement('header1-element');
-        h1.setAttribute('role', 'heading');
-        h1.setAttribute('aria-level', '1');
+        this.requiredAttributes();
         this.addText();
         return h1;
     }
@@ -51,10 +55,14 @@ export class Header2 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '2');
+    }
+
     render() {
         const h2 = document.createElement('header2-element');
-        h2.setAttribute('role', 'heading');
-        h2.setAttribute('aria-level', '2');
+        this.requiredAttributes();
         this.addText();
         return h2;
     }
@@ -81,10 +89,14 @@ export class Header3 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '3');
+    }
+
     render() {
         const h3 = document.createElement('header3-element');
-        h3.setAttribute('role', 'heading');
-        h3.setAttribute('aria-level', '3');
+        this.requiredAttributes();
         this.addText();
         return h3;
     }
@@ -111,10 +123,14 @@ export class Header4 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '4');
+    }
+
     render() {
         const h4 = document.createElement('header4-element');
-        h4.setAttribute('role', 'heading');
-        h4.setAttribute('aria-level', '4');
+        this.requiredAttributes();
         this.addText();
         return h4;
     }
@@ -141,10 +157,15 @@ export class Header5 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '5');
+    }
+
     render() {
         const h5 = document.createElement('header5-element');
         h5.setAttribute('role', 'heading');
-        h5.setAttribute('aria-level', '5');
+        this.requiredAttributes();
         this.addText();
         return h5;
     }
@@ -171,10 +192,14 @@ export class Header6 extends HTMLElement {
         addTextToElement(this, this.data);
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'heading');
+        this.setAttribute('aria-level', '6');
+    }
+
     render() {
         const h6 = document.createElement('header6-element');
-        h6.setAttribute('role', 'heading');
-        h6.setAttribute('aria-level', '6');
+        this.requiredAttributes();
         this.addText();
         return h6;
     }

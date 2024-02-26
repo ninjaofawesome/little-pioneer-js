@@ -31,11 +31,15 @@ export class SplitParagraph extends HTMLElement {
         });
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'paragraph');
+    }
+
     render() {
-        const p = document.createElement('split-paragraph-element');
-        p.setAttribute('role', 'paragraph');
+        const splitParagraph = document.createElement('split-paragraph-element');
+        this.requiredAttributes();
         this.addText();
-        return p;
+        return splitParagraph;
     }
 };
 
