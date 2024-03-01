@@ -44,7 +44,6 @@ export class AnchorElement extends HTMLElement {
   }
 
   addText() {
-    console.log('add text', this.text)
     addTextToElement(this, this.text);
   }
 

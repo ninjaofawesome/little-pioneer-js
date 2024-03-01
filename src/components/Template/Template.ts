@@ -1,8 +1,21 @@
-export const TemplateComponent = (templateId: string) => {
-    const templateEl = document.createElement('template');
-    templateEl.setAttribute('id', templateId);
-    templateEl.setAttribute('data-testid', templateId);
+export class TemplateComponent {
+    templateId: string;
 
-    return templateEl;
+    constructor(templateId: string) {
+        this.templateId = templateId;
+    }
 
-}
+    connectedCallback() {
+        console.log(`the template is ${this.templateId}`);
+        this.render();
+    }
+
+    render() {
+        const templateEl = document.createElement('template');
+        templateEl.setAttribute('id', this.templateId);
+        templateEl.setAttribute('data-testid', this.templateId);
+        return(templateEl)
+
+    }
+};
+
