@@ -17,15 +17,17 @@ export class ListComponent extends HTMLElement {
         this.render();
     }
 
-    render(){
-        const list = document.createElement('list-component');
-
+    addListItems() {
         const menuValues = Object.values(this.data);
         menuValues.forEach((item) => {
             const eachListItem = new ListItem(item);
-            list.appendChild(eachListItem)
+            this.appendChild(eachListItem);
         });
+    }
 
+    render(){
+        const list = document.createElement('list-component');
+        this.addListItems();
         return list;
     }
 };

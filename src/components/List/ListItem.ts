@@ -1,10 +1,9 @@
-//todo: create service for state in next ticket
 import { addTextToElement } from "../../utils";
 
 export class ListItem extends HTMLElement {
-    item: string;
+    item: unknown;
 
-    constructor(item: string) {
+    constructor(item: unknown) {
         super();
         console.log('ListItem --->');
         this.item = item;
