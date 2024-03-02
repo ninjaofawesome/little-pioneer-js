@@ -1,4 +1,3 @@
-import { AnchorElementProps } from "../../../models";
 import { addTextToElement } from "../../../utils";
 
 export class AnchorElement extends HTMLElement {
@@ -37,14 +36,11 @@ export class AnchorElement extends HTMLElement {
     if (this.target !== undefined) {
       this.setAttribute('target', `_${this.target}`)
     }
-
       this.setAttribute('rel', 'noreferrer');
-
       this.setAttribute('rel', 'noopener');
   }
 
   addText() {
-    console.log('add text', this.text)
     addTextToElement(this, this.text);
   }
 

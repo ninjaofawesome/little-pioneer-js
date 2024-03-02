@@ -7,7 +7,7 @@ import {
     Paragraph,
     SplitParagraph,
     Header1,
-    // createListComponent,
+    ListComponent,
     AvatarComponent
 } from "./components";
 
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const navElement = document.querySelector('nav');
     const mainElement = document.querySelector('main');
     const footerElement = document.querySelector('footer'); 
-    // const list = createListComponent(data.sections); 
+    const list = new ListComponent(data.sections); 
     const headerDiv = document.createElement('div');
 
     const p = new Paragraph(data.home.collabSlug);
@@ -41,6 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
     mainElement!.appendChild(AvatarElement)
+    mainElement!.appendChild(list);
 });
 
 

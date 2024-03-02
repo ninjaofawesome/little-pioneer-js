@@ -16,7 +16,7 @@ export {
 } from './Text/Header/Header';
 
 //elements
-export { createListComponent } from "./List/List";
+export { ListComponent } from "./List/List";
 export {
     AvatarComponent,
     TemplateComponent
