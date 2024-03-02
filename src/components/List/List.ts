@@ -13,7 +13,6 @@ export class ListComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('ListComponent has mounted to page');
         this.render();
     }
 
@@ -32,6 +31,6 @@ export class ListComponent extends HTMLElement {
     }
 };
 
-customElements.define('list-component', ListComponent)
+customElements.define('list-component', ListComponent);
 
   

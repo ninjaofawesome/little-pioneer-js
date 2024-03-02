@@ -12,7 +12,6 @@ export class Paragraph extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Paragraph has mounted to page');
         this.render();
     }
 

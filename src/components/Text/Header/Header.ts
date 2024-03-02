@@ -13,7 +13,6 @@ export class Header1 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header1 has mounted to page');
         this.render();
     }
 
@@ -47,7 +46,6 @@ export class Header2 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header2 has mounted to page');
         this.render();
     }
 
@@ -81,7 +79,6 @@ export class Header3 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header3 has mounted to page');
         this.render();
     }
 
@@ -115,7 +112,6 @@ export class Header4 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header4 has mounted to page');
         this.render();
     }
 
@@ -149,7 +145,6 @@ export class Header5 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header5 has mounted to page');
         this.render();
     }
 
@@ -184,7 +179,6 @@ export class Header6 extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Header6 has mounted to page');
         this.render();
     }
 

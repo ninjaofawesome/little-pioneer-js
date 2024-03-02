@@ -10,7 +10,6 @@ export class ListItem extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('ListItem has mounted to page');
         this.render();
     };
 

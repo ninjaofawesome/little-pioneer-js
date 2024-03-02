@@ -13,9 +13,7 @@ export class SplitParagraph extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('Split Paragraph has mounted to page');
         this.render();
-  
     }
 
     addText() {

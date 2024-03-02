@@ -3,11 +3,11 @@ export class TemplateComponent extends HTMLElement {
 
     constructor(templateId: string) {
         super();
+        console.log('template component ------->');
         this.templateId = templateId;
     }
 
     connectedCallback() {
-        console.log(`the template is ${this.templateId}`);
         this.render();
     }
 

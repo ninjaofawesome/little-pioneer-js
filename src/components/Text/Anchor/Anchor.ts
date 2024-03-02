@@ -36,9 +36,7 @@ export class AnchorElement extends HTMLElement {
     if (this.target !== undefined) {
       this.setAttribute('target', `_${this.target}`)
     }
-
       this.setAttribute('rel', 'noreferrer');
-
       this.setAttribute('rel', 'noopener');
   }
 
