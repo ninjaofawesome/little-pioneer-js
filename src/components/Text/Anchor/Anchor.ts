@@ -1,4 +1,3 @@
-import { AnchorElementProps } from "../../../models";
 import { addTextToElement } from "../../../utils";
 
 export class AnchorElement extends HTMLElement {

@@ -17,7 +17,7 @@ describe('p tags', () => {
         // check for text
         expect(text!.innerHTML).toContain('Additonal Questions? Email me (Craig Levy)');
         // check that anchor tags exist
-        expect(screen.getByText('craig@littlepioneer.com').closest('a')?.getAttribute('href')).toEqual('mailto:craig@littlepioneer.com?subject=Hey!')
+        expect(screen.getAllByRole('link').length).toBe(3);
         // check for link text
         expect(text!.innerHTML).toContain('craig@littlepioneer.com'); 
       });

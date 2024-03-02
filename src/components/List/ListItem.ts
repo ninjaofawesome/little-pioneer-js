@@ -1,9 +1,9 @@
 import { addTextToElement } from "../../utils";
 
 export class ListItem extends HTMLElement {
-    item: unknown;
+    item: any;
 
-    constructor(item: unknown) {
+    constructor(item: any) {
         super();
         console.log('ListItem --->');
         this.item = item;
