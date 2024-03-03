@@ -1,9 +1,11 @@
 import  {
-    addTextToElement
+    addTextToElement,
+    unitOfMeasure
 } from './utils';
 
 export {
-    addTextToElement
+    addTextToElement,
+    unitOfMeasure
 };
 
 

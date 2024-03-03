@@ -3,5 +3,6 @@ export {
 } from './type';
 
 export {
-    ListElement
+    ListElement,
+    Measurements
 } from './elements';
