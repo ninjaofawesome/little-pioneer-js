@@ -3,7 +3,7 @@ import { ImageContainer } from "./ImageContainer";
 
 describe('ImageContainer', () => {
 ;
-    const imageContainer= new ImageContainer(200, true);
+    const imageContainer= new ImageContainer('hello world', 200, true);
 
     test('it should return an element', ()=> {
         const bodyEl = document.querySelector('body');
@@ -17,5 +17,9 @@ describe('ImageContainer', () => {
 
     test('it should have a set height', () => {
         expect(imageContainer.height).toBe(200);
+    });
+    
+    test('it should have alt text', () => {
+        expect(imageContainer.altText).toBe('hello world');
     })
 });

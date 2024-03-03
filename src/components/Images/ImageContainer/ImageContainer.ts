@@ -4,16 +4,23 @@ export class ImageContainer extends HTMLElement {
     fullWidth?: boolean | undefined;
     width?: number | undefined;
     height: number;
+    altText: string;
 
-    constructor(height: number, fullWidth?: boolean | undefined, width?: number | undefined) {
+    constructor(altText: string, height: number, fullWidth?: boolean | undefined, width?: number | undefined) {
         super();
         this.fullWidth = fullWidth;
         this.width = width;
         this.height = height;
+        this.altText = altText;
     }
 
     connectedCallback() {
         this.render();
+    }
+
+    requiredAttributes() {
+        this.setAttribute('role', 'image');
+        this.setAttribute('alt', this.altText);
     }
 
     containerDimensions() {
@@ -26,6 +33,7 @@ export class ImageContainer extends HTMLElement {
     render() {
         const container = document.createElement('image-container');
         this.containerDimensions();
+        this.requiredAttributes();
         return container;
     }
 };
