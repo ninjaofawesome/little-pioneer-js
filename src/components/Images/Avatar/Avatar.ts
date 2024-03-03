@@ -1,8 +1,11 @@
 //todo: extend this way to other components
 
 export class AvatarComponent extends HTMLElement {
-    constructor() {
+    altText: string;
+
+    constructor(altText: string) {
         super();
+        this.altText = altText;
     }
 
     connectedCallback() {
@@ -10,8 +13,15 @@ export class AvatarComponent extends HTMLElement {
         console.log('Avatar has mounted to page');
     }
 
+    requiredAttributes() {
+        this.setAttribute('role', 'image');
+        this.setAttribute('alt', this.altText);
+    }
+
     render() {
-        return (document.createElement('avtar-component'));
+        const avatar = document.createElement('avtar-component');
+        this.requiredAttributes();
+        return avatar;
     }
 }
 
