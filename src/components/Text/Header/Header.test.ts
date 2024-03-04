@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 import{ screen } from '@testing-library/dom';
 import {
   Header1,

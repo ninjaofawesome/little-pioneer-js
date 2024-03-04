@@ -2,6 +2,7 @@
 import { TemplateComponent } from "./Template/Template";
 import { AvatarComponent } from "./Images/Avatar/Avatar";
 import { ImageContainer } from './Images/ImageContainer/ImageContainer';
+import { ButtonComponent } from "./Button/Button";
 
 //Text
 export { Paragraph } from "./Text/Paragraph/Paragraph";
@@ -20,6 +21,7 @@ export {
 export { ListComponent } from "./List/List";
 export {
     AvatarComponent,
+    ButtonComponent,
     ImageContainer,
     TemplateComponent
 };
