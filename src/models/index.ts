@@ -4,5 +4,6 @@ export {
 
 export {
     ListElement,
-    Measurements
+    Measurements,
+    SizeProps
 } from './elements';

@@ -3,3 +3,11 @@ export interface ListElement {
 };
 
 export type Measurements = 'px' | 'percent' | 'rem' | 'em' | 'vh' | 'vw';
+
+export interface SizeProps {
+    'xs': 'xs',
+    'sm': 'sm',
+    'md': 'md',
+    'lg': 'lg',
+    'xl': 'xl'
+};
