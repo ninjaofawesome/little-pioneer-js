@@ -3,10 +3,12 @@ import '@webcomponents/custom-elements';
 import data from './utils/textDictionary.json';
 import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
+import { SizeProps } from './models';
 import {
     Paragraph,
     SplitParagraph,
     Header1,
+    IconComponent,
     ListComponent,
     AvatarComponent
 } from "./components";
@@ -35,13 +37,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     navElement!.appendChild(headerDiv);
 
-    const AvatarElement = new AvatarComponent();
+    const AvatarElement = new AvatarComponent('hello world');
+    const Icon = new IconComponent('menu', 'sm');
 
     // mainElement!.appendChild(list);
     mainElement!.appendChild(p);
     mainElement!.appendChild(contact);
     mainElement!.appendChild(AvatarElement)
-    mainElement!.appendChild(list);
+    mainElement!.appendChild(list).appendChild(Icon);
 });
 
 

@@ -16,4 +16,5 @@ export const addTextToElement = (el: HTMLElement, content: string) => el.innerHT
  */
 export const unitOfMeasure = (num: number, unit: Measurements) => unit === 'percent' ? `${num}%` : `${num}${unit}`;
 
+
  

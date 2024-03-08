@@ -3,6 +3,8 @@ import { TemplateComponent } from "./Template/Template";
 import { AvatarComponent } from "./Images/Avatar/Avatar";
 import { ImageContainer } from './Images/ImageContainer/ImageContainer';
 import { ButtonComponent } from "./Button/Button";
+import { IconComponent } from "./Icon/Icon";
+import { ListComponent } from "./List/List";
 
 //Text
 export { Paragraph } from "./Text/Paragraph/Paragraph";
@@ -18,11 +20,13 @@ export {
 } from './Text/Header/Header';
 
 //elements
-export { ListComponent } from "./List/List";
+
 export {
     AvatarComponent,
     ButtonComponent,
+    IconComponent,
     ImageContainer,
+    ListComponent,
     TemplateComponent
 };
 
