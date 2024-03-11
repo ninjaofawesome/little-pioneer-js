@@ -3,7 +3,6 @@ import '@webcomponents/custom-elements';
 import data from './utils/textDictionary.json';
 import contactData from './utils/linkTextDictionary.json';
 import { stylesLoaded } from "./styles/index";
-import { SizeProps } from './models';
 import {
     Paragraph,
     SplitParagraph,
@@ -38,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navElement!.appendChild(headerDiv);
 
     const AvatarElement = new AvatarComponent('hello world');
-    const Icon = new IconComponent('menu', 'sm');
+    const Icon = IconComponent('menu', 'sm');
 
     // mainElement!.appendChild(list);
     mainElement!.appendChild(p);

@@ -3,40 +3,26 @@ import { iconPaths } from './iconPaths';
 type IconSizeProps = 'sm' | 'md';
 type PathProps = 'menu' | 'email' | 'google' | 'fb' | 'ig';
 
-export class IconComponent extends HTMLElement {
-    size: IconSizeProps;
-    path: PathProps;
+export const IconComponent = (path: PathProps, size: IconSizeProps) => {
+    console.log('iconnnn---->')
 
-    constructor(path: PathProps, size: IconSizeProps) {
-        super();
-        this.size = size || undefined;
-        this.path = path;
-        console.log('iconic ----->', this.size, this.path)
-    }
+    const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
-    connectedCallback() {
-        this.render();
-    };
+    const pathEl = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
-    setViewbox() {
-        const viewboxAttrs = this.size === 'sm' ? '0 0 24 24' : '0 0 36 36';
-        this.setAttribute('viewbox', viewboxAttrs);
-    }
+    const iconSizeNum = size === 'sm' ? 24 : 36;
+    const viewBoxSize = `0 0 ${iconSizeNum} ${iconSizeNum}`;
+    const iconPath = (path: PathProps) => iconPaths[path];
 
-    requiredAttributes() {
-        this.setAttribute('role', 'graphics-symbol');
-        this.setAttribute('d', this.path);
-        this.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        this.setViewbox();
-    }
+    icon.setAttribute('viewbox', viewBoxSize);
+    icon.setAttribute('role', 'graphics-symbol');
+    icon.setAttribute('height', `${iconSizeNum}`);
+    icon.setAttribute('width', `${iconSizeNum}`);
 
-    render() {
-        // const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        const icon = document.createElement('icon-component')
-        this.requiredAttributes();
-        return icon;
-    }
+    
+    pathEl.setAttribute('d', iconPath(path));
+    pathEl.setAttribute('fill', '#000000');
 
-};
-
-customElements.define('icon-component', IconComponent);
+    icon.appendChild(pathEl);
+    return icon;
+}
